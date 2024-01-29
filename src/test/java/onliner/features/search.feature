@@ -13,6 +13,6 @@ Feature: Onliner Search
       | 40        | Диагональ     |
       | 50        | Диагональ     |
     Then I verify that price is less than 1500.0
-    And I verify that product is only 'Samsung'
-    And I verify that resolution is only '1920x1080'
-    And I verify that  diagonal is between 40 and 50
+    Then I verify that product is only 'Samsung'
+    Then I verify that resolution is only '1920x1080'
+    Then I verify that  diagonal is between 40 and 50

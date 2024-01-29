@@ -37,7 +37,7 @@ public class ProductStep extends BaseStep {
                 "This product has more then " + price);
     }
 
-    @And("I verify that product is only {string}")
+    @Then("I verify that product is only {string}")
     public void verifyProductTitle(String titleText) {
         List<String> productsNameList = productPage.getProductsName();
         softAssert.assertTrue(productsNameList.stream()
@@ -45,7 +45,7 @@ public class ProductStep extends BaseStep {
                 "This product doesn't contain " + titleText);
     }
 
-    @And("I verify that resolution is only {string}")
+    @Then("I verify that resolution is only {string}")
     public void verifyProductResolution(String resolution) {
         List<String> productsDescriptionList = productPage.getProductsDescription();
         softAssert.assertTrue(productsDescriptionList.stream()
@@ -53,7 +53,7 @@ public class ProductStep extends BaseStep {
                 "This product description doesn't contain " + resolution);
     }
 
-    @And("I verify that  diagonal is between {int} and {int}")
+    @Then("I verify that  diagonal is between {int} and {int}")
     public void verifyProductDiagonalIsBetween(int startRange, int endRange) {
         List<Integer> propertyFromDescriptionList = productPage.extractPropertyFromDescription(ProductInfoHelper.extractTvDiagonal);
         softAssert.assertTrue(propertyFromDescriptionList.stream()
