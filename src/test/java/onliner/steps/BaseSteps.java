@@ -2,10 +2,10 @@ package onliner.steps;
 
 import org.testng.asserts.SoftAssert;
 
-public class BaseStep {
+public class BaseSteps {
     protected final SoftAssert softAssert;
 
-    public BaseStep() {
+    public BaseSteps() {
         this.softAssert = new SoftAssert();
     }
 }

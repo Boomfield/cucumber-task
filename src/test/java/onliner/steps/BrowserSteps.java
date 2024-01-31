@@ -7,7 +7,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import onliner.helpers.PropertyConfig;
 
-public class BrowserStep extends BaseStep {
+public class BrowserSteps extends BaseSteps {
     private Browser browser;
 
     @Given("Onliner Main page is opened")
