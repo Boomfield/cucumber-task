@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/java/onliner/features",
         glue = "onliner.steps",
-        plugin = {"html:target/CucumberReport.html"}
+        plugin = {"json:target/CucumberReport.json"}
                 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 }
