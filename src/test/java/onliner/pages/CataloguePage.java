@@ -8,12 +8,14 @@ public class CataloguePage extends BaseOnlinerPage {
     private Button btnMainMenu = new Button("//span[@class='catalog-navigation-classifier__item-title-wrapper' and contains(text(),'%s')]", "category in main menu");
     private Button btnSubMenu = new Button("//div[@style='display: block;']//div[contains(text(),'%s')]", "category in sub menu");
     private Button btnTypeOfProduct = new Button("//div[contains(@class,'item_active')]//span[contains(@class,'dropdown-title') and normalize-space(text())='%s']", "type of product");
+    private Button btnAcceptCookies = new Button(By.xpath("//button[contains(@class,'fc-cta-consent fc-primary-button')]"), "accept cookies");
 
     public CataloguePage() {
         super(catalogTitleLinkLocator, "Catalog page");
     }
 
     public void selectProductsInNavigateMenu(String navigateMenu, String electronicMenu, String televisionSubMenu) {
+        btnAcceptCookies.clickElement();
         btnMainMenu.getElementByText(navigateMenu).clickElement();
         btnSubMenu.getElementByText(electronicMenu).moveMouseOnElement();
         btnTypeOfProduct.getElementByText(televisionSubMenu).clickElementAndWait();
